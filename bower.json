@@ -1,0 +1,22 @@
+{
+  "name": "ember-lazy-resources-demo",
+  "description": "Small description for ember-lazy-resources-demo goes here",
+  "main": "",
+  "authors": [
+    "Vivek Munde"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/vivekmunde/ember-lazy-resources-demo",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "font-awesome": "^4.7.0",
+    "leaflet": "^1.1.0"
+  }
+}

@@ -3,7 +3,9 @@
   "version": "0.0.0",
   "description": "Small description for ember-lazy-resources-demo goes here",
   "license": "MIT",
-  "author": "",
+  "authors": [
+    "Vivek Munde"
+  ],
   "directories": {
     "doc": "doc",
     "test": "tests"
