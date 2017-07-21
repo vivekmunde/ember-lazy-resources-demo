@@ -33,7 +33,7 @@ All the assets are fingerprinted by Ember by using broccoli-asset-rev, so that t
 
 We can easily note that each resource has been assigned a separate hash.
 
-#### ***To load the assets lazily, the app must know the exact fingerprinted path of these resources, it means the asset map should be known to the app for these resources.***
+### ***To load the assets lazily, the app must know the exact fingerprinted path of these resources, it means the asset map should be known to the app for these resources.***
 
 #### **AssetMap.json**
 To solve this, the we can enable the asset map generation by setting the `generateAssetMap` to true in *ember-cli-build.js* file.
@@ -65,7 +65,7 @@ Secondly, the *assetMap.json* file, most of the time, is a large file in size to
 ## Solution: The other way around
 We know that each resource gets its own hash generated during the fingerprinting stage of the build process. The whole purpose of fingerprinting/hashing is to make sure that the users get latest code on their devices.
 
-#### *So, I though the other way around, instead of generating separate hash for each resource, can we generate same hash key for each resource? Means, instead of Ember generating the asset map for us, can we supply the fingerprint/hash to Ember? And then by some means make the app aware about the fingerprint/hash used for the resources?*
+### *So, I though the other way around, instead of generating separate hash for each resource, can we generate same hash key for each resource? Means, instead of Ember generating the asset map for us, can we supply the fingerprint/hash to Ember? And then by some means make the app aware about the fingerprint/hash used for the resources?*
 
 ##### **Yes, Yes, Yes, We can do that!**
 In *ember-cli-build.js* we can use [md5](https://www.npmjs.com/package/md5) to generate a fresh fingerprint/hash for each build and [broccoli-file-creator](https://www.npmjs.com/package/broccoli-file-creator) to create a file which will hold this fingerprint value and this file can be loaded along with other assets.
@@ -104,7 +104,7 @@ In *ember-cli-build.js* we can use [md5](https://www.npmjs.com/package/md5) to g
 	  return app.toTree(assetFingerprintTree);
 	};
 
-##### **How this works:**
+#### **How this works:**
 * Generate a hash using [md5](https://www.npmjs.com/package/md5) by supplying a unique key, `Date.now()` is used here.
 * Optional: Supply the list of extensions to apply the fingerprinting. Default options are `[‘js’, ‘css’, ‘png’, ‘jpg’, ‘gif’, ‘map’]`. I have added `json` into it so that the build processes all the i18n.json files stored at public directory, because I wanted to load the i18n files on demand.
 * Set the customHash equal to the fingerprint/hash generated, which will be used to fingerprint all resources.
@@ -172,7 +172,8 @@ Example:
 	    });
 	  }
 
-Thank you for reading! 
+Thank you for reading!   
+
 Happy Lazy Coding!
 
 
