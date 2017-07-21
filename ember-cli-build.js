@@ -65,10 +65,15 @@ module.exports = function (defaults) {
   });
 
   // ------------------------------------------------------------------------------------------
+  // Showdown.js
+  // ------------------------------------------------------------------------------------------
+  app.import(app.bowerDirectory + '/showdown/dist/showdown.js', { outputFile: 'assets/showdown.js' });
+
+  // ------------------------------------------------------------------------------------------
   // Create a asset-fingerprint.js file which holds the fingerprintHash value 
   // This hash value is used by all the asset loaders to load the assets on-demand 
   // ------------------------------------------------------------------------------------------
-  var assetFingerprintTree = writeFile('./assets/assets-fingerprint.js', '(function(_window){ _window.ASSET_FINGERPRINT_HASH = "' + (app.env === 'production' ? fingerprintHash : '') + '"; })(window);');
+  var assetFingerprintTree = writeFile('./assets/assets-fingerprint.js', `(function(_window){ _window.ASSET_FINGERPRINT_HASH = "${(app.env === 'production' ? `-${fingerprintHash}` : '')}"; })(window);`);
 
   return app.toTree(MergeTrees([bootstrapFontsTree, fontAwesomeFontsTree, leafletImagesTree, assetFingerprintTree]));
 };

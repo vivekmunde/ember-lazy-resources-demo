@@ -1,0 +1,8 @@
+{
+    "markdownText": {
+        "i18nLoadedDynamically": "* i18n translations were loaded dynamically in the `beforeModel()` hook of the `markdown-text` route",
+        "markdownJSLoadedDynamically": "* The showdown.js script was loaded dynamically in the `beforeModel()` hook of the `markdown-text` route",
+        "smpleMarkdown1":"# Ember.js Lazy Assets: Fingerprinting & loading static/dynamic assets on demand",
+        "smpleMarkdown2":"[Ember.js](emberjs.com) is a great framework which offers a robust platform to build large scale ambitious [SPA](https://medium.com/r/?url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FSingle-page_application)s. Any large scale [SPA](https://medium.com/r/?url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FSingle-page_application) needs many resources, like external javascript libraries, stylesheets, i18n files etc, and these resources keep on growing in their scale and numbers as the application matures with more and more functionality is incorporated. Some or many of these resources can be functionality centric, means they are required on only specific routes/modules. So, the loading of these resources that are not necessary for the initial page load can be deferred until after the initial load. Doing so can help reduce resource contention and improve performance."
+    }
+}

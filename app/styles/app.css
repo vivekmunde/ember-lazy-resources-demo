@@ -1,0 +1,25 @@
+.preloader {
+    padding: 100px 30px;
+    text-align: center;
+}
+
+.preloader > i {
+    font-size: 40px;
+    color: #888;
+}
+
+hr.home-divider {
+    margin: 80px 0;
+}
+
+img.home {
+    height: 300px;
+}
+
+.home-button {
+    margin-top: 40px;
+}
+
+img.dynamic-image-url {
+    height: 300px;
+}

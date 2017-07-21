@@ -7,6 +7,8 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('dynamic-image-urls');
+  this.route('markdown-text');
 });
 
 export default Router;

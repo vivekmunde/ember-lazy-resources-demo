@@ -1,0 +1,17 @@
+{
+    "dynamicUrls": {
+        "amsterdam": "Amsterdam",
+        "atlanta": "Atlanta",
+        "austin": "Austin",
+        "columbus": "Columbus",
+        "dc": "Washington DC",
+        "emberconf-2016": "Ember Conference 2016",
+        "lts": "Long Time Support",
+        "munich": "Munich",
+        "nyc": "New York",
+        "releigh": "Releigh",
+        "sandiego": "Sandiego",
+        "i18nLoadedDynamically": "i18n translations were loaded dynamically in the beforeModel() hook of the dynamic-image-urls route",
+        "imageDynamicUrl": "The image url is being computed live/dynamically"
+    }
+}

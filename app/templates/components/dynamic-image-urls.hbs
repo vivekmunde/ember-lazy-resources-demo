@@ -1,0 +1,33 @@
+<div class="row text-center">
+    <div class="col-sm-6 col-sm-offset-3">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <img src={{imageUrl}} alt="..." class="dynamic-image-url">
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-body">
+                {{imageUrl}}
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <select class="form-control" onchange={{action "setImageTag" value="target.value" }}>
+                {{#each imageTags as |tag|}}
+                    <option value={{tag}} selected={{eq tag imageTag}}>{{t (concat "dynamicUrls." tag)}}</option>
+                {{/each}}
+                </select>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <p class="text-left">
+                    <ul>
+                        <li>{{t "dynamicUrls.i18nLoadedDynamically"}}</li>
+                        <li>{{t "dynamicUrls.imageDynamicUrl"}}</li>
+                    </ul>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
