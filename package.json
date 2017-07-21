@@ -18,6 +18,7 @@
   },
   "devDependencies": {
     "broccoli-asset-rev": "^2.4.5",
+    "broccoli-file-creator": "^1.1.1",
     "broccoli-funnel": "^1.2.0",
     "broccoli-merge-trees": "^2.0.0",
     "ember-ajax": "^3.0.0",
@@ -35,10 +36,15 @@
     "ember-cli-uglify": "^1.2.0",
     "ember-data": "~2.14.3",
     "ember-export-application-global": "^2.0.0",
+    "ember-i18n": "^5.0.2",
+    "ember-i18n-loader": "^0.1.0",
     "ember-load-initializers": "^1.0.0",
+    "ember-m-css-loader": "^0.1.1",
+    "ember-m-js-loader": "^0.1.0",
     "ember-resolver": "^4.0.0",
     "ember-source": "~2.14.0",
-    "loader.js": "^4.2.3"
+    "loader.js": "^4.2.3",
+    "md5": "^2.2.1"
   },
   "engines": {
     "node": "^4.5 || 6.* || >= 7.*"

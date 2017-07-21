@@ -17,6 +17,7 @@
   "dependencies": {
     "bootstrap": "^3.3.7",
     "font-awesome": "^4.7.0",
-    "leaflet": "^1.1.0"
+    "leaflet": "^1.1.0",
+    "showdown": "^1.7.1"
   }
 }

@@ -1,0 +1,11 @@
+{
+    "app": {
+        "home": "Home",
+        "title": "Lazy Resources",
+        "toggleNavigation": "Toggle navigation"
+    },
+    "i18nTranslations": "i18n Translations",
+    "i18nTranslationsDescription": "The i18n translations have been loaded lazily in the application route's beforeModel() hook",
+    "showDynamicImages": "Dynamic URLs Demo",
+    "showMarkdownText": "Lazy Loading Javascript Demo"
+}

@@ -4,11 +4,19 @@
 const EmberApp = require('ember-cli/lib/broccoli/ember-app'),
   path = require('path'),
   Funnel = require('broccoli-funnel'),
-  MergeTrees = require('broccoli-merge-trees');
+  MergeTrees = require('broccoli-merge-trees'),
+  writeFile = require('broccoli-file-creator'),
+  md5 = require('md5');
 
 module.exports = function (defaults) {
+  // Create a md5 hash for fingerprinting
+  const fingerprintHash = md5(Date.now());
+
   let app = new EmberApp(defaults, {
-    // Add options here
+    fingerprint: {
+      extensions: ['js', 'css', 'png', 'jpg', 'gif', 'map', 'json'],
+      customHash: fingerprintHash //use a single hash for all assets
+    }
   });
 
   // ------------------------------------------------------------------------------------------
@@ -56,5 +64,16 @@ module.exports = function (defaults) {
     destDir: 'assets/images'
   });
 
-  return app.toTree(MergeTrees([bootstrapFontsTree, fontAwesomeFontsTree, leafletImagesTree]));
+  // ------------------------------------------------------------------------------------------
+  // Showdown.js
+  // ------------------------------------------------------------------------------------------
+  app.import(app.bowerDirectory + '/showdown/dist/showdown.js', { outputFile: 'assets/showdown.js' });
+
+  // ------------------------------------------------------------------------------------------
+  // Create a asset-fingerprint.js file which holds the fingerprintHash value 
+  // This hash value is used by all the asset loaders to load the assets on-demand 
+  // ------------------------------------------------------------------------------------------
+  var assetFingerprintTree = writeFile('./assets/assets-fingerprint.js', `(function(_window){ _window.ASSET_FINGERPRINT_HASH = "${(app.env === 'production' ? `-${fingerprintHash}` : '')}"; })(window);`);
+
+  return app.toTree(MergeTrees([bootstrapFontsTree, fontAwesomeFontsTree, leafletImagesTree, assetFingerprintTree]));
 };

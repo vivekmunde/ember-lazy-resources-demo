@@ -1,6 +1,6 @@
 export function initialize() {
   const application = arguments[1] || arguments[0];
-  application.inject('route', 'jsLoader', 'service:js-loader');
+  application.inject('route', 'mJsLoader', 'service:m-js-loader');
 }
 
 export default {

@@ -1,1 +1,30 @@
-{{outlet}}
+<br>
+<br>
+<br>
+
+<div class="text-center">
+    <img src="./images/i18n-logo.png" alt="..." class="home">
+    <h2>{{t "i18nTranslations"}}</h2>
+    <h4>{{t "i18nTranslationsDescription"}}</h4>
+</div>
+
+<hr class="home-divider">
+
+<div class="text-center">
+    <div>
+        <img src="./images/original-ember-mascout.png" alt="..." class="home">
+    </div>
+    {{#link-to "dynamic-image-urls" class="btn btn-lg btn-default home-button"}}{{t "showDynamicImages"}}{{/link-to}}
+</div>
+
+<hr class="home-divider">
+
+<div class="text-center">
+    <div>
+        <img src="./images/markdown-icon.png" alt="..." class="home">
+    </div>
+    {{#link-to "markdown-text" class="btn btn-lg btn-default home-button"}}{{t "showMarkdownText"}}{{/link-to}}
+</div>
+
+<br>
+<br>
