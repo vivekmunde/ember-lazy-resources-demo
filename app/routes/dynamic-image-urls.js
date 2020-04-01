@@ -1,6 +1,6 @@
-import Ember from 'ember';
+import Route from '@ember/routing/route';
 
-export default Ember.Route.extend({
+export default Route.extend({
     loadTranslations() {
         return this.get('i18nLoader').load({
             url: `/locales/${this.get('i18n.locale')}/dynamic-urls${window.ASSET_FINGERPRINT_HASH}.json`

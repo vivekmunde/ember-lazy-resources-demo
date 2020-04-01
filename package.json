@@ -1,6 +1,7 @@
 {
   "name": "ember-lazy-resources-demo",
   "version": "0.0.0",
+  "private": true,
   "description": "Small description for ember-lazy-resources-demo goes here",
   "license": "MIT",
   "authors": [
@@ -13,7 +14,8 @@
   "repository": "",
   "scripts": {
     "build": "ember build",
-    "start": "ember server",
+    "lint:js": "eslint ./*.js app config lib server tests",
+    "start": "ember serve",
     "test": "ember test"
   },
   "devDependencies": {
@@ -22,33 +24,34 @@
     "broccoli-funnel": "^1.2.0",
     "broccoli-merge-trees": "^2.0.0",
     "ember-ajax": "^3.0.0",
-    "ember-cli": "~2.14.0",
+    "ember-cli": "~3.0.0",
     "ember-cli-app-version": "^3.0.0",
-    "ember-cli-babel": "^6.3.0",
-    "ember-cli-dependency-checker": "^1.3.0",
-    "ember-cli-eslint": "^3.0.0",
+    "ember-cli-babel": "^6.6.0",
+    "ember-cli-dependency-checker": "^2.0.0",
+    "ember-cli-eslint": "^4.2.1",
     "ember-cli-htmlbars": "^2.0.1",
-    "ember-cli-htmlbars-inline-precompile": "^0.4.3",
+    "ember-cli-htmlbars-inline-precompile": "^1.0.0",
     "ember-cli-inject-live-reload": "^1.4.1",
-    "ember-cli-qunit": "^4.0.0",
-    "ember-cli-shims": "^1.1.0",
+    "ember-cli-qunit": "^4.1.1",
+    "ember-cli-shims": "^1.2.0",
     "ember-cli-sri": "^2.1.0",
-    "ember-cli-uglify": "^1.2.0",
+    "ember-cli-uglify": "^2.0.0",
     "ember-cli-update": "^0.53.3",
-    "ember-data": "~2.14.3",
+    "ember-data": "~3.0.0",
     "ember-export-application-global": "^2.0.0",
     "ember-i18n": "^5.0.2",
     "ember-i18n-loader": "^0.1.0",
     "ember-load-initializers": "^1.0.0",
-    "ember-m-css-loader": "^1.0.1",
-    "ember-m-js-loader": "^1.0.0",
+    "ember-m-css-loader": "^2.0.0",
+    "ember-m-js-loader": "^2.0.0",
+    "ember-maybe-import-regenerator": "^0.1.6",
     "ember-resolver": "^4.0.0",
-    "ember-source": "~2.14.0",
+    "ember-source": "~3.0.0",
+    "eslint-plugin-ember": "^5.0.0",
     "loader.js": "^4.2.3",
     "md5": "^2.2.1"
   },
   "engines": {
     "node": "^4.5 || 6.* || >= 7.*"
-  },
-  "private": true
+  }
 }

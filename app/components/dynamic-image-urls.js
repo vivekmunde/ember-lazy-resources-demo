@@ -1,9 +1,10 @@
-import Ember from 'ember';
+import Component from '@ember/component';
+import { computed } from '@ember/object';
 
-export default Ember.Component.extend({
+export default Component.extend({
     imageTag: 'amsterdam',
     imageTags: ['amsterdam', 'atlanta', 'austin', 'columbus', 'dc', 'emberconf-2016', 'lts', 'munich', 'nyc', 'releigh', 'sandiego'],
-    imageUrl: Ember.computed('imageTag', function () {
+    imageUrl: computed('imageTag', function () {
         return `./images/${this.get('imageTag')}${window.ASSET_FINGERPRINT_HASH}.png`
     }),
     actions: {

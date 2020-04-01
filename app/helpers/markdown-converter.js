@@ -1,8 +1,9 @@
-import Ember from 'ember';
+import { helper } from '@ember/component/helper';
+import { htmlSafe } from '@ember/template';
 
 export function markdownConverter([text]) {
   const converter = new showdown.Converter();
-  return Ember.String.htmlSafe(converter.makeHtml(`${text}`));
+  return htmlSafe(converter.makeHtml(`${text}`));
 }
 
-export default Ember.Helper.helper(markdownConverter);
+export default helper(markdownConverter);
